@@ -6,33 +6,27 @@
 </div>
 
 ## ℹ️ How to use the program?
-- Download the [.exe](https://github.com/Mrmisterxd/bed-time/releases/tag/v1.0) file from the repository, double-click the file, and you can use the script!
-- The script is used like a standard [.py](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.py)) file; the .exe is simply a compiled .py file created using pyinstaller.
+- Download the [`.exe`](https://github.com/Mrmisterxd/bed-time/releases/tag/v1.0) file from the repository, double-click the file, and you can use the script!
+- The script is used like a standard [`.py`](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.py) file.
+- The .exe is simply a compiled .py file created using pyinstaller.
 - The following libraries are needed:
 
 <details>
   
-  <summary>Liberally Lists:</summary>
+  <summary>Library List:</summary>
   
-`altgraph==0.17.4`
-
-`colorama==0.4.6`
-
-`keyboard==0.13.5`
-
-`packaging==25.0`
-
-`pefile==2023.2.7`
-
-`pygame==2.6.1`
-
-`pyinstaller==6.16.0`
-
-`pyinstaller-hooks-contrib==2025.9`
-
-`pywin32-ctypes==0.2.3`
-
-`setuptools==80.9.0`
+```
+altgraph==0.17.4
+colorama==0.4.6
+keyboard==0.13.5
+packaging==25.0
+pefile==2023.2.7
+pygame==2.6.1
+pyinstaller==6.16.0
+pyinstaller-hooks-contrib==2025.9
+pywin32-ctypes==0.2.3
+setuptools==80.9.0
+```
 
 > - Also You can also see the list of required libraries in the [`requirements.txt`](https://github.com/Mrmisterxd/bed-time/blob/main/requirements.txt) file.
 </details>

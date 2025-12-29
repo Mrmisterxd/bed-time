@@ -1,13 +1,42 @@
 <div align="center">
-<h1> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BedTime</a> </h1> 
+<h1> <a href="https://github.com/Mrmisterxd/bed-time/tree/main">BedTime</a> </h1> 
 
 <p>This program is needed to make it easier to set the bedtime, instead of using the inconvenient command in Win+R. The program makes this process more convenient.</p>
 
 </div>
 
 ## ℹ️ How to use the program?
-- Download the [.exe](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.exe) file from the repository, double-click the file, and you can use the script!
+- Download the [.exe](https://github.com/Mrmisterxd/bed-time/releases/tag/v1.0) file from the repository, double-click the file, and you can use the script!
 - The script is used like a standard [.py](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.py)) file; the .exe is simply a compiled .py file created using pyinstaller.
+- The following libraries are needed:
+
+<details>
+  
+  <summary>Liberally Lists:</summary>
+  
+`altgraph==0.17.4`
+
+`colorama==0.4.6`
+
+`keyboard==0.13.5`
+
+`packaging==25.0`
+
+`pefile==2023.2.7`
+
+`pygame==2.6.1`
+
+`pyinstaller==6.16.0`
+
+`pyinstaller-hooks-contrib==2025.9`
+
+`pywin32-ctypes==0.2.3`
+
+`setuptools==80.9.0`
+
+> - Also You can also see the list of required libraries in the [`requirements.txt`](https://github.com/Mrmisterxd/bed-time/blob/main/requirements.txt) file.
+</details>
+
 - Alternatively, you can use the .py file in any other [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (for example, [VS Code](https://en.wikipedia.org/wiki/Visual_Studio_Code_)).
 
 ## ℹ️ Description of choosing:
@@ -40,7 +69,7 @@
 
 ### `6. Check bedtime` 
 >[!IMPORTANT]
-> ### Item 6 only displays the information that was specified during a single program launch.
+> ### Displays the timer set during the current session. It cannot detect timers set via Win+R or previous script runs or another script/programm.
 -  This item is <ins>***ONLY***</ins> needed to calm your mind after you set the sleep time or disable it (<ins>***During the first program launch, only after selecting any of the preceding options❗***</ins>).
 -  *If* you set the sleep time during a different previous launch of this program this information is also *incorrect*.
 -  As I said, the information is ***only*** valid during a single program launch. *If* you set the sleep time using Win+R, this is ***also***  *incorrect*.

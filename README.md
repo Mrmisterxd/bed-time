@@ -1,21 +1,63 @@
-# Bed-time - 
-This program is needed to make it easier to set the bedtime, instead of using the inconvenient command in Win+R. The program makes this process more convenient.
-# Description of choosing:
-`1. Set bedtime in seconds` - Sets a sleep timer for Windows in seconds. 
-*It executes the command in Win+R; your value = "shutdown -s -t" entered in Win+R is in seconds.*
+<div align="center">
+<h1> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BedTime</a> </h1> 
 
-`2. Turn off bedtime` - Turns off the sleep timer. 
-*The meaning of this command in Win+R is "shutdown -a"*
+<p>This program is needed to make it easier to set the bedtime, instead of using the inconvenient command in Win+R. The program makes this process more convenient.</p>
 
-`3. Set bedtime in hours` - Sets a sleep timer for Windows in hours.
-*It executes the command in Win+R; your value in "shutdown -s -t" will be seconds multiply 3600.*
+</div>
 
-`4. Set bedtime in minutes` - Sets a sleep timer for Windows in hours.
-*It executes the command in Win+R; your value in "shutdown -s -t" will be seconds multiply 60.*
+## ℹ️ How to use the program?
+- Download the [.exe](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.exe) file from the repository, double-click the file, and you can use the script!
+- The script is used like a standard [.py](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.py)) file; the .exe is simply a compiled .py file created using pyinstaller.
+- Alternatively, you can use the .py file in any other [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (for example, [VS Code](https://en.wikipedia.org/wiki/Visual_Studio_Code_)).
 
-# `5. Russian roulette` - 
-Russian Roulette: you are given two numbers to choose from, the chance of choosing the first number is 50 percent, the second number is also 50 percent, and with a 50/50 chance your computer may **INSTANTLY SHUT DOWN.** ***The author is not responsible for this.*** With a 50/50 chance, the command "shutdown -s -t" will be executed, which is equivalent to an immediate computer shutdown. 
+## ℹ️ Description of choosing:
+### `1. Set bedtime in seconds` 
+- Sets a sleep timer for Windows in seconds. 
+*It executes the command in Win+R; your value = `"shutdown -s -t <your value>"` entered in Win+R is in seconds.*
 
-### ***Before using option 5, make sure you have saved important data and will not suffer any damage/risk if your computer shuts down instantly without confirmation.*** (This is the dealer's bet!)
+### `2. Turn off bedtime` 
+- Turns off the sleep timer. 
+*The meaning of this command in Win+R is `"shutdown -a"`*
 
-`6. Check bedtime` - 
+### `3. Set bedtime in hours` 
+- Sets a sleep timer for Windows in hours.
+*It executes the command in Win+R; your value in `"shutdown -s -t <your value>"` will be seconds multiply 3600.*
+
+### `4. Set bedtime in minutes` 
+- Sets a sleep timer for Windows in minutes.
+*It executes the command in Win+R; your value in `"shutdown -s -t <your value>"` will be seconds multiply 60.*
+
+### `5.🎲 Russian roulette` - 
+> [!CAUTION]
+> ### Russian Roulette: you are given two numbers to choose from, the chance of choosing the first number is 50 percent, the second number is also 50 percent, and with a 50/50 chance your computer may <ins>***INSTANTLY SHUT DOWN❗❗❗***</ins>
+> 
+-  ### <ins>***The author is not responsible for this.***</ins>
+>  [!CAUTION]
+> ### With a 50/50 chance, the command "shutdown -s -t" will be **executed**, which is equivalent to an ***immediate*** computer *shutdown*. 
+
+> [!IMPORTANT]
+> ### ***Before using option 5, make <ins>**sure**</ins> you have saved important data and will not suffer any damage/risk if your computer shuts down instantly without confirmation.*** (This is the dealer's bet!)
+
+### `6. Check bedtime` 
+>[!IMPORTANT]
+> ### Item 6 only displays the information that was specified during a single program launch.
+-  This item is <ins>***ONLY***</ins> needed to calm your mind after you set the sleep time or disable it (<ins>***During the first program launch, only after selecting any of the preceding options❗***</ins>).
+-  *If* you set the sleep time during a different previous launch of this program this information is also *incorrect*.
+-  As I said, the information is ***only*** valid during a single program launch. *If* you set the sleep time using Win+R, this is ***also***  *incorrect*.
+>[!NOTE]
+>### All correct information is:
+> - 1 - only after selecting any of the options
+> - 2 - only during a single program launch.
+
+### `7. Exit`
+- Closes the entire script and exits the script completely.
+>[!NOTE]
+> ### After you exit the program, your timer remains active, as all commands are integrated into Windows.
+
+## ℹ️ Compatibility with operating systems:
+- This program is only compatible with Windows
+> Windows XP, Vista, 7, 8, 8.1, 10, 11
+
+## ⚖️ Licensing
+
+The project is distributed under the [MIT License](https://github.com/Mrmisterxd/bed-time/blob/main/LICENSE)

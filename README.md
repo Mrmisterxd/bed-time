@@ -6,7 +6,7 @@
 </div>
 
 ## ℹ️ How to use the program?
-- Download the [`.exe`](https://github.com/Mrmisterxd/bed-time/releases/tag/v1.1) file from the repository, double-click the file, and you can use the script!
+- Download the [`.exe`](https://github.com/Mrmisterxd/bed-time/releases/tag/v1.2) file from the repository, double-click the file, and you can use the script!
 - The script is used like a standard [`.py`](https://github.com/Mrmisterxd/bed-time/blob/main/Bedtime.py) file.
 - The .exe is simply a compiled .py file created using pyinstaller.
 - The following libraries are needed:

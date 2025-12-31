@@ -8,24 +8,30 @@ import msvcrt
 colorama.init(autoreset=True)
 
 seconds = 0
-min = 0
-hoursss = 0
+minutes = 0
+hours = 0
 
 red = colorama.Fore.RED
 green = colorama.Fore.GREEN
 yellow = colorama.Fore.YELLOW 
-redL = colorama.Style.BRIGHT + colorama.Fore.RED
-greenL = colorama.Style.BRIGHT + colorama.Fore.GREEN
-yellowL = colorama.Fore.YELLOW + colorama.Style.BRIGHT
+redLight = colorama.Style.BRIGHT + colorama.Fore.RED
+greenLight = colorama.Style.BRIGHT + colorama.Fore.GREEN
+yellowLight = colorama.Fore.YELLOW + colorama.Style.BRIGHT
 reset = colorama.Style.RESET_ALL 
 
-gl = greenL
-rl = redL
+gl = greenLight
+rl = redLight
 r = red
 g = green
-yl = yellowL
+yl = yellowLight
 y = yellow
 rs = reset
+   
+def PressButon():
+    time.sleep(1)
+    print('Press any button to return...')
+    msvcrt.getch()
+    time.sleep(0.3)
 
 while True:
     os.system('cls')
@@ -42,18 +48,12 @@ while True:
     except ValueError:
         time.sleep(1)
         print(yl + 'Numbers only. choice number 1-7')
-        time.sleep(1)
-        print('Press any button to return...')
-        msvcrt.getch()
-        time.sleep(0.3)
+        PressButon()
         continue
     if a not in range(1, 8):
         time.sleep(1)
         print(yl + 'Choice number 1-7')
-        time.sleep(1)
-        print('Press any button to return...')
-        msvcrt.getch()
-        time.sleep(0.3)
+        PressButon()
         continue
 
     print (a)
@@ -64,33 +64,23 @@ while True:
         except ValueError:
             time.sleep(1)
             print(yl + 'Numbers only')
-            time.sleep(1)
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
-            continue
-        min = hoursss = 0
+            PressButon()
+        minutes = hours = 0
         print('Timer will be set for ' + str(seconds) + ' seconds ')
         time.sleep(1)
         os.system('shutdown -s -t ' + str(seconds))
         print(gl + 'Command ended')
-        time.sleep(1)
-        print('Press any button to return...')
-        msvcrt.getch()
-        time.sleep(0.3)
+        PressButon()
         continue
     
     elif a == 2:
         os.system('shutdown -a')
-        seconds = min = hoursss = 0
+        seconds = minutes = hours = 0
         time.sleep(1)
         print(gl + 'Command ended')
         time.sleep(1)
         print('Bedtime was off')
-        time.sleep(1)
-        print('Press any button to return...')
-        msvcrt.getch()
-        time.sleep(0.3)
+        PressButon()
         continue
 
     elif a == 7:
@@ -101,24 +91,18 @@ while True:
     elif a == 3:
         print('Set bedtime in hours (decimal values allowed, e.g. 1.5)')
         try:
-            hoursss = float(input('Enter hours:'))
-            hrstoscnds = int(3600 * hoursss)
+            hours = float(input('Enter hours:'))
+            hours_seconds = int(3600 * hours)
             time.sleep(1)
-            os.system('shutdown -s -t ' + str(hrstoscnds) )
-            seconds = min = 0
-            print(gl + 'Command end' ', bedtime set to ' + str(hoursss) + ' hours ( ' +str(hrstoscnds) + ' seconds )')
-            time.sleep(1)
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
+            os.system('shutdown -s -t ' + str(hours_seconds) )
+            seconds = minutes = 0
+            print(gl + 'Command end' ', bedtime set to ' + str(hours) + ' hours ( ' +str(hours_seconds) + ' seconds )')
+            PressButon()
             continue
         except ValueError:
             time.sleep(1)
             print(yl + 'Number, not word  ')
-            time.sleep(1)
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
+            PressButon()
             continue
     
     elif a == 5:
@@ -131,34 +115,31 @@ while True:
             except ValueError:
                 time.sleep(1)
                 print(yl +'Number only.')
-                time.sleep(1)
-                print('Press any button to return...')
-                msvcrt.getch()
-                time.sleep(0.3)
+                PressButon()
                 continue
             if choicep == 2:
                 print(r + 'Wise decision.')
                 time.sleep(0.5)
                 break
             while True:
-                for dlr in ' - Dealer: ':
-                    print(dlr, end = '', flush=True)
+                for dealer in ' - Dealer: ':
+                    print(dealer, end = '', flush=True)
                 time.sleep(0.4)
-                for dlr in 'choose 1 or 2. ':
-                    print(dlr, end = '', flush=True)
-                    if dlr != ' ':
+                for dealer in 'choose 1 or 2. ':
+                    print(dealer, end = '', flush=True)
+                    if dealer != ' ':
                         winsound.Beep(230, 17)
                     time.sleep(0.08)
                 time.sleep(0.4)
-                for dlr in 'One shotgun, ':
-                    print(dlr, end = '', flush=True)
-                    if dlr != ' ':
+                for dealer in 'One shotgun, ':
+                    print(dealer, end = '', flush=True)
+                    if dealer != ' ':
                         winsound.Beep(230, 17)
                     time.sleep(0.08)
                 time.sleep(0.4)
-                for dlr in 'one shell... ':
-                    print(dlr, end = '', flush=True)
-                    if dlr != ' ':
+                for dealer in 'one shell... ':
+                    print(dealer, end = '', flush=True)
+                    if dealer != ' ':
                         winsound.Beep(230, 17)
                     time.sleep(0.08)
                 print()                                
@@ -193,41 +174,33 @@ while True:
     elif a == 4:
         print('Set bedtime in minutes (decimal values allowed, f.e. 2.5)')
         try:
-            min = float(input('Enter minutes:'))
-            minsec = int(60 * min)
+            minutes = float(input('Enter minutes:'))
+            minute_seconds = int(60 * minutes)
             time.sleep(1)
-            os.system('shutdown -s -t ' + str(minsec) )
-            seconds = hoursss = 0
-            print('Command end, bedtime set to ' + str(min) + ' minutes ( ' +str(minsec) + ' seconds. )')
-            time.sleep(1)
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
+            os.system('shutdown -s -t ' + str(minute_seconds) )
+            seconds = hours = 0
+            print('Command end, bedtime set to ' + str(minutes) + ' minutes ( ' +str(minute_seconds) + ' seconds. )')
+            PressButon()
             continue
         except ValueError:
             time.sleep(1)
             print(yl + 'Number, not word')
-            time.sleep(1)
-            print('Press any button to return...')
+            PressButon()
             continue
 
     elif a == 6:
-        if seconds or min or hoursss:
+        if seconds or minutes or hours:
             print(gl +'Bedtime was set.')
             print(yl + 'This is only for this program session')
             print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
+            PressButon()
             continue
         else:
             print(rl +'Bedtime is not set.')
             print(yl + 'This is only for this program session')
             print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
-            print('Press any button to return...')
-            msvcrt.getch()
-            time.sleep(0.3)
+            PressButon()
             continue
 

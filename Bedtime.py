@@ -186,6 +186,7 @@ while True:
 
     elif a == 6:
         if seconds or minutes or hours:
+            time.sleep(1)
             print(gl +'Bedtime was set.')
             print(yl + 'This is only for this program session')
             print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")
@@ -193,6 +194,7 @@ while True:
             PressButon()
             continue
         else:
+            time.sleep(1)
             print(rl +'Bedtime is not set.')
             print(yl + 'This is only for this program session')
             print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")

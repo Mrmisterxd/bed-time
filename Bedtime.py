@@ -44,7 +44,7 @@ while True:
     print('6. Check bedtime')
     print('7. Exit')
     try:
-        a = int(input('Enter your choice:'))
+        a = int(input('Enter your choice: '))
     except ValueError:
         time.sleep(1)
         print(yl + 'Numbers only. choice number 1-7')
@@ -59,17 +59,17 @@ while True:
     print (a)
     
     if a == 1:
+        print('Set time in seconds (1 hour - 3600 seconds)')
         try:
-         seconds = int(input('Set time in seconds ( 1 hour - 3600 seconds) - '))
+         seconds = int(input('Enter seconds: '))
         except ValueError:
             time.sleep(1)
             print(yl + 'Numbers only')
             PressButon()
         minutes = hours = 0
-        print('Timer will be set for ' + str(seconds) + ' seconds ')
         time.sleep(1)
         os.system('shutdown -s -t ' + str(seconds))
-        print(gl + 'Command ended')
+        print('Command ended' ',bedtime set to ' + str(seconds) + ' seconds' )
         PressButon()
         continue
     
@@ -82,28 +82,40 @@ while True:
         print('Bedtime was off')
         PressButon()
         continue
-
-    elif a == 7:
-        print('Goodbye')
-        time.sleep(1)
-        sys.exit()
-    
+  
     elif a == 3:
         print('Set bedtime in hours (decimal values allowed, e.g. 1.5)')
         try:
-            hours = float(input('Enter hours:'))
+            hours = float(input('Enter hours: '))
             hours_seconds = int(3600 * hours)
             time.sleep(1)
             os.system('shutdown -s -t ' + str(hours_seconds) )
             seconds = minutes = 0
-            print(gl + 'Command end' ', bedtime set to ' + str(hours) + ' hours ( ' +str(hours_seconds) + ' seconds )')
+            print('Command end' ', bedtime set to ' + str(hours) + ' hours (' +str(hours_seconds) + ' seconds)')
             PressButon()
             continue
         except ValueError:
             time.sleep(1)
-            print(yl + 'Number, not word  ')
+            print(yl + 'Number, not word')
             PressButon()
             continue
+
+    elif a == 4:
+        print('Set bedtime in minutes (decimal values allowed, f.e. 2.5)')
+        try:
+            minutes = float(input('Enter minutes: '))
+            minute_seconds = int(60 * minutes)
+            time.sleep(1)
+            os.system('shutdown -s -t ' + str(minute_seconds) )
+            seconds = hours = 0
+            print('Command end, bedtime set to ' + str(minutes) + ' minutes (' +str(minute_seconds) + ' seconds)')
+            PressButon()
+            continue
+        except ValueError:
+            time.sleep(1)
+            print(yl + 'Number, not word')
+            PressButon()
+            continue        
     
     elif a == 5:
         print('Russian roulette.')
@@ -142,9 +154,10 @@ while True:
                     if dealer != ' ':
                         winsound.Beep(230, 17)
                     time.sleep(0.08)
-                print()                                
+                print()
+                print('1 or 2?')                         
                 try:                 
-                 choicedie = int(input('1 or 2? '))
+                 choicedie = int(input('Enter your choice: '))
                 except ValueError:
                     time.sleep(1)
                     print('...')
@@ -170,23 +183,6 @@ while True:
                     os.system('shutdown -s -t 0')
                     print(r +'You lose.')
                     time.sleep(3)
-                                    
-    elif a == 4:
-        print('Set bedtime in minutes (decimal values allowed, f.e. 2.5)')
-        try:
-            minutes = float(input('Enter minutes:'))
-            minute_seconds = int(60 * minutes)
-            time.sleep(1)
-            os.system('shutdown -s -t ' + str(minute_seconds) )
-            seconds = hours = 0
-            print('Command end, bedtime set to ' + str(minutes) + ' minutes ( ' +str(minute_seconds) + ' seconds. )')
-            PressButon()
-            continue
-        except ValueError:
-            time.sleep(1)
-            print(yl + 'Number, not word')
-            PressButon()
-            continue
 
     elif a == 6:
         if seconds or minutes or hours:
@@ -204,3 +200,7 @@ while True:
             PressButon()
             continue
 
+    elif a == 7:
+        print('Goodbye')
+        time.sleep(1)
+        sys.exit()

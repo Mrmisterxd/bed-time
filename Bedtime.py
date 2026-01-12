@@ -118,8 +118,9 @@ while True:
             continue        
     
     elif a == 5:
-        print('Russian roulette.')
         while True:
+            os.system('cls')
+            print('Russian roulette.')
             print('1 -', rl + 'Yes.')  
             print('2 -', gl + 'No.')
             try:

@@ -16,21 +16,14 @@
   <summary>Library List:</summary>
   
 ```
-altgraph==0.17.4
 colorama==0.4.6
-keyboard==0.13.5
-packaging==25.0
-pefile==2023.2.7
-pyinstaller==6.16.0
-pyinstaller-hooks-contrib==2025.9
-pywin32-ctypes==0.2.3
-setuptools==80.9.0
 ```
 
 > - Also You can also see the list of required libraries in the [`requirements.txt`](https://github.com/Mrmisterxd/bed-time/blob/main/requirements.txt) file.
 </details>
 
 - Alternatively, you can use the .py file in any other [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (for example, [VS Code](https://en.wikipedia.org/wiki/Visual_Studio_Code_)).
+- But in fact, it is not necessary to use `IDE`, it is enough to have Python installed on your computer and double click on the file, this is just an example, but you can also open the file using `IDE`.
 
 ## ℹ️ Description of choosing:
 ### `1. Set bedtime in seconds` 

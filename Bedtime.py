@@ -16,17 +16,8 @@ green = colorama.Fore.GREEN
 yellow = colorama.Fore.YELLOW 
 redLight = colorama.Style.BRIGHT + colorama.Fore.RED
 greenLight = colorama.Style.BRIGHT + colorama.Fore.GREEN
-yellowLight = colorama.Fore.YELLOW + colorama.Style.BRIGHT
-reset = colorama.Style.RESET_ALL 
+yellowLight = colorama.Fore.YELLOW + colorama.Style.BRIGHT 
 
-gl = greenLight
-rl = redLight
-r = red
-g = green
-yl = yellowLight
-y = yellow
-rs = reset
-   
 def PressButon():
     time.sleep(1)
     print('Press any button to return...')
@@ -47,12 +38,12 @@ while True:
         a = int(input('Enter your choice: '))
     except ValueError:
         time.sleep(1)
-        print(yl + 'Numbers only. choice number 1-7')
+        print(yellowLight + 'Numbers only. choice number 1-7')
         PressButon()
         continue
     if a not in range(1, 8):
         time.sleep(1)
-        print(yl + 'Choice number 1-7')
+        print(yellowLight + 'Choice number 1-7')
         PressButon()
         continue
 
@@ -64,7 +55,7 @@ while True:
          seconds = int(input('Enter seconds: '))
         except ValueError:
             time.sleep(1)
-            print(yl + 'Numbers only')
+            print(yellowLight + 'Numbers only')
             PressButon()
         minutes = hours = 0
         time.sleep(1)
@@ -77,7 +68,7 @@ while True:
         os.system('shutdown -a')
         seconds = minutes = hours = 0
         time.sleep(1)
-        print(gl + 'Command ended')
+        print(greenLight + 'Command ended')
         time.sleep(1)
         print('Bedtime was off')
         PressButon()
@@ -96,7 +87,7 @@ while True:
             continue
         except ValueError:
             time.sleep(1)
-            print(yl + 'Number, not word')
+            print(yellowLight + 'Number, not word')
             PressButon()
             continue
 
@@ -113,7 +104,7 @@ while True:
             continue
         except ValueError:
             time.sleep(1)
-            print(yl + 'Number, not word')
+            print(yellowLight + 'Number, not word')
             PressButon()
             continue        
     
@@ -121,17 +112,17 @@ while True:
         while True:
             os.system('cls')
             print('Russian roulette.')
-            print('1 -', rl + 'Yes.')  
-            print('2 -', gl + 'No.')
+            print('1 -', redLight + 'Yes.')  
+            print('2 -', greenLight + 'No.')
             try:
                 choicep = int(input('Will you play?: '))             
             except ValueError:
                 time.sleep(1)
-                print(yl +'Number only.')
+                print(yellowLight +'Number only.')
                 PressButon()
                 continue
             if choicep == 2:
-                print(r + 'Wise decision.')
+                print(red + 'Wise decision.')
                 time.sleep(0.5)
                 break
             while True:
@@ -158,47 +149,47 @@ while True:
                 print()
                 print('1 or 2?')                         
                 try:                 
-                 choicedie = int(input('Enter your choice: '))
+                 choiceDie = int(input('Enter your choice: '))
                 except ValueError:
                     time.sleep(1)
                     print('...')
                     time.sleep(1)
-                    print(r + "Don't get funny to me... only 1 or 2...")
+                    print(red + "Don't get funny to me... only 1 or 2...")
                     time.sleep(2)
                     continue
-                if choicedie not in (1, 2):
+                if choiceDie not in (1, 2):
                     time.sleep(1)
                     print('...')
                     time.sleep(1)
-                    print(r + "Don't get funny to me... only 1 or 2...")
+                    print(red + "Don't get funny to me... only 1 or 2...")
                     time.sleep(2)
                     continue
                 gun = random.randint(1, 2)
-                if choicedie == gun:
-                    print(gl + 'You survived.')
+                if choiceDie == gun:
+                    print(greenLight + 'You survived.')
                     time.sleep(1.33)
                     break
                 else:
-                    print(rl + 'BANG! Never see you again.')
+                    print(redLight + 'BANG! Never see you again.')
                     time.sleep(0.8)
                     os.system('shutdown -s -t 0')
-                    print(r +'You lose.')
+                    print(red +'You lose.')
                     time.sleep(3)
 
     elif a == 6:
         if seconds or minutes or hours:
             time.sleep(1)
-            print(gl +'Bedtime was set.')
-            print(yl + 'This is only for this program session')
-            print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")
+            print(greenLight +'Bedtime was set.')
+            print(yellowLight + 'This is only for this program session')
+            print('If you enabled or disabled bedtime via Windows -', yellowLight + "this is won't show here")
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
             PressButon()
             continue
         else:
             time.sleep(1)
-            print(rl +'Bedtime is not set.')
-            print(yl + 'This is only for this program session')
-            print('If you enabled or disabled bedtime via Windows -', yl + "this is won't show here")
+            print(redLight +'Bedtime is not set.')
+            print(yellowLight + 'This is only for this program session')
+            print('If you enabled or disabled bedtime via Windows -', yellowLight + "this is won't show here")
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
             PressButon()
             continue

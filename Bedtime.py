@@ -57,6 +57,11 @@ while True:
             time.sleep(1)
             print(yellowLight + 'Numbers only')
             PressButon()
+        if seconds < 0:
+            time.sleep(1)
+            print(yellowLight + "You can't turn off the computer in the past!")
+            PressButon()
+            continue
         minutes = hours = 0
         time.sleep(1)
         os.system('shutdown -s -t ' + str(seconds))
@@ -78,6 +83,11 @@ while True:
         print('Set bedtime in hours (decimal values allowed, e.g. 1.5)')
         try:
             hours = float(input('Enter hours: '))
+            if hours < 0:
+                time.sleep(1)
+                print(yellowLight + "You can't turn off the computer in the past!")
+                PressButon()
+                continue
             hours_seconds = int(3600 * hours)
             time.sleep(1)
             os.system('shutdown -s -t ' + str(hours_seconds) )
@@ -95,6 +105,11 @@ while True:
         print('Set bedtime in minutes (decimal values allowed, f.e. 2.5)')
         try:
             minutes = float(input('Enter minutes: '))
+            if minutes < 0:
+                time.sleep(1)
+                print(yellowLight + "You can't turn off the computer in the past!")
+                PressButon()
+                continue
             minute_seconds = int(60 * minutes)
             time.sleep(1)
             os.system('shutdown -s -t ' + str(minute_seconds) )
@@ -180,21 +195,30 @@ while True:
         if seconds or minutes or hours:
             time.sleep(1)
             print(greenLight +'Bedtime was set.')
+            time.sleep(0.3)
             print(yellowLight + 'This is only for this program session')
+            time.sleep(0.3)
             print('If you enabled or disabled bedtime via Windows -', yellowLight + "this is won't show here")
+            time.sleep(0.3)
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
+            time.sleep(0.3)
             PressButon()
             continue
         else:
             time.sleep(1)
             print(redLight +'Bedtime is not set.')
+            time.sleep(0.3)
             print(yellowLight + 'This is only for this program session')
+            time.sleep(0.3)
             print('If you enabled or disabled bedtime via Windows -', yellowLight + "this is won't show here")
+            time.sleep(0.3)
             print('- Option 6 is just for peace of mind and to verify the successful completion or failure of one of the items.')
+            time.sleep(0.3)
             PressButon()
             continue
 
     elif a == 7:
-        print('Goodbye')
+        time.sleep(1)
+        print('Goodbye.')
         time.sleep(1)
         sys.exit()

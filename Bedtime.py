@@ -60,6 +60,7 @@ while True:
         if seconds < 0:
             time.sleep(1)
             print(yellowLight + "You can't turn off the computer in the past!")
+            seconds = minutes = hours = 0
             PressButon()
             continue
         minutes = hours = 0
@@ -86,6 +87,7 @@ while True:
             if hours < 0:
                 time.sleep(1)
                 print(yellowLight + "You can't turn off the computer in the past!")
+                seconds = minutes = hours = 0
                 PressButon()
                 continue
             hours_seconds = int(3600 * hours)
@@ -108,6 +110,7 @@ while True:
             if minutes < 0:
                 time.sleep(1)
                 print(yellowLight + "You can't turn off the computer in the past!")
+                seconds = minutes = hours = 0
                 PressButon()
                 continue
             minute_seconds = int(60 * minutes)

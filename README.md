@@ -73,6 +73,9 @@ colorama==0.4.6
 - This program is only compatible with Windows
 > Windows XP, Vista, 7, 8, 8.1, 10, 11
 
+## ℹ️ Contact me:
+- `Telegram` [@cryoffs](https://t.me/cryoffs)
+
 ## ⚖️ Licensing
 
 The project is distributed under the [MIT License](https://github.com/Mrmisterxd/bed-time/blob/main/LICENSE)
